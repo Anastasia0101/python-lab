@@ -18,23 +18,23 @@ class Overcoat:
         return 'First is more expensive {}'.format(self.price > other.price)
 
     def __str__(self):
-        return 'str Overcoat({}, {}, {}, {})'.format(self.color, self.price, self.season, self.size)
+        return 'Overcoat({}, {}, {}, {})'.format(self.color, self.price, self.season, self.size)
 
 print("Input first overcoat: ")
-color = input("Enter color: ")
-season = input("Enter season: ")
-price = int(input("Enter price: "))
-size = int(input("Enter size: "))
+color_first = input("Enter color: ")
+season_first = input("Enter season: ")
+price_first = int(input("Enter price: "))
+size_first = int(input("Enter size: "))
 
-overcoat_first = Overcoat(color, price, season, size)
+overcoat_first = Overcoat(color_first, price_first, season_first, size_first)
 
 print("Input second overcoat: ")
-color = input("Enter color: ")
-season = input("Enter season: ")
-price = int(input("Enter price: "))
-size = int(input("Enter size: "))
+color_second = input("Enter color: ")
+season_second = input("Enter season: ")
+price_second = int(input("Enter price: "))
+size_second = int(input("Enter size: "))
 
-overcoat_second = Overcoat(color, price, season, size)
+overcoat_second = Overcoat(color_second, price_second, season_second, size_second)
 
 print(overcoat_first.__gt__(overcoat_second)) 
 print(overcoat_first.__eq__(overcoat_second))
@@ -42,3 +42,8 @@ print(overcoat_first.__str__())
 print(overcoat_second.__str__())
 overcoat_first = overcoat_second
 print(overcoat_first)
+
+try:
+    overcoat_first.__eq__(overcoat_second) == True
+finally:
+    print('It is equal!!!')
