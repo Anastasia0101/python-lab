@@ -5,4 +5,4 @@ class Energy:
 
     def get_amount(self):
         return self.__amount
-print("for check")
+print("check")
